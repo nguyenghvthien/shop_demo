@@ -1,4 +1,8 @@
 ShopDemo::Application.routes.draw do
+  resources :categories do
+    resources :products
+  end
+
   get "home/index"
   root to: "home#index", as: 'home'
 
